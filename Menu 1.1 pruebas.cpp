@@ -30,7 +30,7 @@ enum modoCursor{MINI = 5, NORMAL = 20, SOLIDO = 80};
 enum estadoCursor{APAGADO, ENCENDIDO};
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
-enum simbSimple{BV = 179, ESD = 191, EII, BH = 196, EID = 217, ESI}; //EnumeraciÛn para el marco.
+enum simbSimple{BV = 179, ESD = 191, EII, BH = 196, EID = 217, ESI}; //Enumeraci√≥n para el marco.
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
 /*
 enum miColor{
@@ -127,7 +127,7 @@ int main()
     EstableceColor(BLANCO, PURPURA);
 
     system("pause"); //Pausa para que se ponga en pantalla completa esta madre.
-    //LimpiÈ la pantalla porque quedaba un pedazo del mensaje de la pausa anterior en la esquina superior derecha, ver·s quÌtenle esta
+    //Limpi√© la pantalla porque quedaba un pedazo del mensaje de la pausa anterior en la esquina superior derecha, ver√°s qu√≠tenle esta
     //pausa y chequenlo.
     system("cls");
     int opcion;
@@ -214,12 +214,12 @@ void BorraMarco(int ancho, int alto, int x, int y)
 /*int MenuPrincipal()
 {
   /*  char tecla; //Este va a se como el centinela que anda checando que tecla presiona el usuario.
-    int x = 25, y = 1;//Coordenadas en donde se va a comenzar a imprimir el tÌtulo "Memorama"
+    int x = 25, y = 1;//Coordenadas en donde se va a comenzar a imprimir el t√≠tulo "Memorama"
 */
 
 
 /*
-    //Se imprime el tÌtulo (MEMORAMA) en la misma posiciÛn x, solo la y cambiar· porque ps, no puedo darle un endl.
+    //Se imprime el t√≠tulo (MEMORAMA) en la misma posici√≥n x, solo la y cambiar√° porque ps, no puedo darle un endl.
     gotoxy(x,y++);
     cout << " .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.";
     gotoxy(x,y++);
@@ -266,7 +266,7 @@ void BorraMarco(int ancho, int alto, int x, int y)
     x = 70;
     y+=5;
 
-    //Se repite el proceso de impresiÛn de mensajito.
+    //Se repite el proceso de impresi√≥n de mensajito.
     gotoxy(x,y++);
     cout << "    ____           __                       _                      ";
     gotoxy(x,y++);
@@ -279,7 +279,7 @@ void BorraMarco(int ancho, int alto, int x, int y)
     cout << "/___/_/ /_/____/\\__/_/   \\__,_/\\___/\\___/_/\\____/_/ /_/\\___/____/  ";
 
 
-    //De nuevo y por ˙ltima vez inicializo las coordenadas para centrar el ˙ltimo mensaje (Salir).
+    //De nuevo y por √∫ltima vez inicializo las coordenadas para centrar el √∫ltimo mensaje (Salir).
     x = 93;
     y+=5;
 
@@ -295,7 +295,7 @@ void BorraMarco(int ancho, int alto, int x, int y)
     gotoxy(x,y++);
     cout << "/____/\\__,_/_/_/_/     ";
     *//*
-    //Este pequeÒo bloquecillo llevo el cursor a la posiciÛn del mensaje de "Jugar". Se me hizo lÛgico iniciar allÌ
+    //Este peque√±o bloquecillo llevo el cursor a la posici√≥n del mensaje de "Jugar". Se me hizo l√≥gico iniciar all√≠
     //e imprimo el marco alrededor
     EstableceColor(BLANCO, ROJOCLARO);
 
@@ -308,38 +308,38 @@ void BorraMarco(int ancho, int alto, int x, int y)
     x = 86;
     y = 16;
     ImprimeMarco(35, 7, x, y );
-    //Este goto regresa el cursor a la esquina superior izquierda del mensajito "Jugar", porque desde allÌ se comienza a
-    //imprimir el marco y estas coordenadas son las que voy a usar como referencia para saber sobre cu·l opciÛn est· el usuario
-    // asÌ como tambiÈn para facilitar el borrado del marco cuando el usuario se vaya hacia otra opciÛn y para facilitar la
-    //impresiÛn del siguiente marquito.
+    //Este goto regresa el cursor a la esquina superior izquierda del mensajito "Jugar", porque desde all√≠ se comienza a
+    //imprimir el marco y estas coordenadas son las que voy a usar como referencia para saber sobre cu√°l opci√≥n est√° el usuario
+    // as√≠ como tambi√©n para facilitar el borrado del marco cuando el usuario se vaya hacia otra opci√≥n y para facilitar la
+    //impresi√≥n del siguiente marquito.
     gotoxy(x,y);
 
-    CambiaCursor(APAGADO); //AquÌ apago el cursor para que no se vea esa madre parpadeando.
+    CambiaCursor(APAGADO); //Aqu√≠ apago el cursor para que no se vea esa madre parpadeando.
     //El ciclito este pues se va a repetir mientras el usuario no le de enter.
     while (tecla != ENTER){
-        tecla = getch(); //Esta sentencia es para esperar que el usuario pique algo en el teclado alv. **AHORA SI VIENE LO PERR”N**
+        tecla = getch(); //Esta sentencia es para esperar que el usuario pique algo en el teclado alv. **AHORA SI VIENE LO PERR√ìN**
         //Estas coordenadas son las coordenadas del mensajito "Jugar", y si el usuario le pica para abajo pasa lo siguiente:
         if(x == 86 && y == 16 && (tecla == FLECHA_ABAJO )){
             BorraMarco(35, 7, x, y); //Se borra el marquito de "Jugar".
             gotoxy(x-=18,y+=10); //Te vas a la esquina superior izquierda del mensaje de "Instrucciones"
-            ImprimeMarco(71, 7, x, y); //Desde allÌ, imprimes el marco alrededor del mensaje (instrucciones)
-            gotoxy(x, y);//Y me regreso a la esquinita superior izquierda para facilitar el proceso, ya se los expliquÈ
+            ImprimeMarco(71, 7, x, y); //Desde all√≠, imprimes el marco alrededor del mensaje (instrucciones)
+            gotoxy(x, y);//Y me regreso a la esquinita superior izquierda para facilitar el proceso, ya se los expliqu√©
             tecla = getch(); //Y espero a que el usuario teclee otra cosa.
         }
 
-        if(x == 68 && y == 26 && (tecla == FLECHA_ABAJO )){ //Ahora, si el usuario est· sobre "Instrucciones" y le da pa abajo:
+        if(x == 68 && y == 26 && (tecla == FLECHA_ABAJO )){ //Ahora, si el usuario est√° sobre "Instrucciones" y le da pa abajo:
             BorraMarco(71, 7, x, y); //Se borra el marco de "Instrucciones".
             gotoxy(x+=23,y+=10); //El cursor se va a la esquina superior izquierda del mensajito de abajo o sea "Salir".
             ImprimeMarco(27, 7, x, y); //Desde la esquinita se imprime el marco alrededor de "Salir".
             gotoxy(x, y); //Me regreso a la esquinita
             tecla = getch(); //Espero a que el usuario pique otra cosa.
         }
-        //***HASTA AQUÕ SE LE DA CHANCE AL USUARIO DE QUE VAYA HACIA ABAJO, SI LLEGA A ESTE PUNTO Y LE SIGUE PICANDO A LA FLECHA PA ABAJO
+        //***HASTA AQU√ç SE LE DA CHANCE AL USUARIO DE QUE VAYA HACIA ABAJO, SI LLEGA A ESTE PUNTO Y LE SIGUE PICANDO A LA FLECHA PA ABAJO
         //PUES EL PROGRAMA NO VA A HACER NADA PORQUE NO HAY UN if QUE CONSIDERE ESE EVENTO***
 
-        //Entonces, a partir de aquÌ hago lo mismo que antes, pero ahora considerando que el usuario le da a la flechita pa arriba.
+        //Entonces, a partir de aqu√≠ hago lo mismo que antes, pero ahora considerando que el usuario le da a la flechita pa arriba.
 
-        //Si est· en el mensaje de "Salir" y pica pa abajo, ps no va a pasar nada alv xD, pero si le da pa arriba:
+        //Si est√° en el mensaje de "Salir" y pica pa abajo, ps no va a pasar nada alv xD, pero si le da pa arriba:
         if(x == 91 && y == 36 && (tecla == FLECHA_ARRIBA )){
             BorraMarco(27, 7, x, y); //Borro el marquito alrededor de "Salir"
             gotoxy(x-=23, y-=10); //Me voy a la esquina superior izquierda del mensaje de arriba o sea "Instrucciones"
@@ -348,7 +348,7 @@ void BorraMarco(int ancho, int alto, int x, int y)
             tecla = getch(); //Espero a que el usuario teclee algo.
         }
 
-        if(x == 68 && y == 26 && (tecla == FLECHA_ARRIBA )){ //Ahora, si el usuario est· en el mensaje "Instrucciones" ps ya se la saben
+        if(x == 68 && y == 26 && (tecla == FLECHA_ARRIBA )){ //Ahora, si el usuario est√° en el mensaje "Instrucciones" ps ya se la saben
             BorraMarco(71, 7, x, y); //Borro el marquito alrededor de "Instrucciones"
             gotoxy(x+=18,y-=10); //Me voy al mensaje de arriba, o sea "Jugar"
             ImprimeMarco(35, 7, x, y); //Le imprimo el marco a la palabrita "Jugar"
@@ -356,12 +356,12 @@ void BorraMarco(int ancho, int alto, int x, int y)
             tecla = getch(); //Espero a que el usuario teclee algo
         }
     }
-    //AquÌ, se supone que el usuario ya tecleÛ ENTER eligiendo una opciÛn, entonces, limpio la pantalla para quitar el men˙
+    //Aqu√≠, se supone que el usuario ya tecle√≥ ENTER eligiendo una opci√≥n, entonces, limpio la pantalla para quitar el men√∫
     system("cls");
 
-    //Y aquÌ wachen, usando la coordenada en y sabrÈ quÈ opciÛn eligiÛ, y ps imprimÌ un mensajito nomas para que vieran que si funcionÛ.
+    //Y aqu√≠ wachen, usando la coordenada en y sabr√© qu√© opci√≥n eligi√≥, y ps imprim√≠ un mensajito nomas para que vieran que si funcion√≥.
     //Obviamente le voy a seguir moviendo para ir completando mas esta onda, porque por ejemplo las instrucciones deben tener la opcion de
-    //devolverse al men˙ y asÌ. pero ps es un avance
+    //devolverse al men√∫ y as√≠. pero ps es un avance
 
     //Los quiero.
     if (y == 16)return JUGAR;
@@ -718,7 +718,7 @@ void Juego_Principiante(int &marcador1, int &marcador2)
     char tecla;
 
     int Opcion1, Opcion2, contador_selecciones;
-    int i_1, i_2, j_1, j_2; //Õndices elegidos.
+    int i_1, i_2, j_1, j_2; //√çndices elegidos.
     int x_aux, y_aux;
 
     int CartasPrincipiante[10] = {1,1,2,2,3,3,4,4,5,5};
