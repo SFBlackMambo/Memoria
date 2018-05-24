@@ -153,3 +153,22 @@ int seleccionMenu
 
         if (y == 36 ) return SALIR;
 }
+
+
+void ImprimeArchivo (const char *archivo, int x, int y)
+{
+    string linea;
+
+    ifstream myfile(archivo);
+    if (myfile.is_open())
+    {
+        while ( getline (myfile,linea) )
+        {
+            gotoxy(x,y++);
+            cout << linea;
+        }
+        myfile.close();
+    }
+
+    else cout << "Error, Archivo \"" << &archivo << "\"faltante";
+}
