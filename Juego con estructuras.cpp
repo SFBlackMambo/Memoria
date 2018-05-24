@@ -30,7 +30,7 @@ enum modoCursor{MINI = 5, NORMAL = 20, SOLIDO = 80};
 enum estadoCursor{APAGADO, ENCENDIDO};
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
-enum simbSimple{BV = 179, ESD = 191, EII, BH = 196, EID = 217, ESI}; //EnumeraciÛn para el marco.
+enum simbSimple{BV = 179, ESD = 191, EII, BH = 196, EID = 217, ESI}; //Enumeraci√≥n para el marco.
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 enum miColor{
@@ -138,7 +138,7 @@ int main()
     EstableceColor(NEGRO, ROJOCLARO);
 
     system("pause"); //Pausa para que se ponga en pantalla completa esta madre.
-    //LimpiÈ la pantalla porque quedaba un pedazo del mensaje de la pausa anterior en la esquina superior derecha, ver·s quÌtenle esta
+    //Limpi√© la pantalla porque quedaba un pedazo del mensaje de la pausa anterior en la esquina superior derecha, ver√°s qu√≠tenle esta
     //pausa y chequenlo.
     system("cls");
     int opcion;
@@ -222,12 +222,12 @@ void BorraMarco(int ancho, int alto, int x, int y)
 int MenuPrincipal()
 {
     char tecla; //Este va a se como el centinela que anda checando que tecla presiona el usuario.
-    int x = 25, y = 1;//Coordenadas en donde se va a comenzar a imprimir el tÌtulo "Memorama"
+    int x = 25, y = 1;//Coordenadas en donde se va a comenzar a imprimir el t√≠tulo "Memorama"
 
 
 
 
-    //Se imprime el tÌtulo (MEMORAMA) en la misma posiciÛn x, solo la y cambiar· porque ps, no puedo darle un endl.
+    //Se imprime el t√≠tulo (MEMORAMA) en la misma posici√≥n x, solo la y cambiar√° porque ps, no puedo darle un endl.
     gotoxy(x,y++);
     cout << " .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.";
     gotoxy(x,y++);
@@ -274,7 +274,7 @@ int MenuPrincipal()
     x = 70;
     y+=5;
 
-    //Se repite el proceso de impresiÛn de mensajito.
+    //Se repite el proceso de impresi√≥n de mensajito.
     gotoxy(x,y++);
     cout << "    ____           __                       _                      ";
     gotoxy(x,y++);
@@ -287,7 +287,7 @@ int MenuPrincipal()
     cout << "/___/_/ /_/____/\\__/_/   \\__,_/\\___/\\___/_/\\____/_/ /_/\\___/____/  ";
 
 
-    //De nuevo y por ˙ltima vez inicializo las coordenadas para centrar el ˙ltimo mensaje (Salir).
+    //De nuevo y por √∫ltima vez inicializo las coordenadas para centrar el √∫ltimo mensaje (Salir).
     x = 93;
     y+=5;
 
@@ -303,45 +303,45 @@ int MenuPrincipal()
     gotoxy(x,y++);
     cout << "/____/\\__,_/_/_/_/     ";
 
-    //Este pequeÒo bloquecillo llevo el cursor a la posiciÛn del mensaje de "Jugar". Se me hizo lÛgico iniciar allÌ
+    //Este peque√±o bloquecillo llevo el cursor a la posici√≥n del mensaje de "Jugar". Se me hizo l√≥gico iniciar all√≠
     //e imprimo el marco alrededor
     EstableceColor(BLANCO, ROJOCLARO);
     x = 86;
     y = 16;
 
     ImprimeMarco(35, 7, x, y );
-    //Este goto regresa el cursor a la esquina superior izquierda del mensajito "Jugar", porque desde allÌ se comienza a
-    //imprimir el marco y estas coordenadas son las que voy a usar como referencia para saber sobre cu·l opciÛn est· el usuario
-    // asÌ como tambiÈn para facilitar el borrado del marco cuando el usuario se vaya hacia otra opciÛn y para facilitar la
-    //impresiÛn del siguiente marquito.
+    //Este goto regresa el cursor a la esquina superior izquierda del mensajito "Jugar", porque desde all√≠ se comienza a
+    //imprimir el marco y estas coordenadas son las que voy a usar como referencia para saber sobre cu√°l opci√≥n est√° el usuario
+    // as√≠ como tambi√©n para facilitar el borrado del marco cuando el usuario se vaya hacia otra opci√≥n y para facilitar la
+    //impresi√≥n del siguiente marquito.
     gotoxy(x,y);
 
-    CambiaCursor(APAGADO); //AquÌ apago el cursor para que no se vea esa madre parpadeando.
+    CambiaCursor(APAGADO); //Aqu√≠ apago el cursor para que no se vea esa madre parpadeando.
     //El ciclito este pues se va a repetir mientras el usuario no le de enter.
     while (tecla != ENTER){
-        tecla = getch(); //Esta sentencia es para esperar que el usuario pique algo en el teclado alv. **AHORA SI VIENE LO PERR”N**
+        tecla = getch(); //Esta sentencia es para esperar que el usuario pique algo en el teclado alv. **AHORA SI VIENE LO PERR√ìN**
         //Estas coordenadas son las coordenadas del mensajito "Jugar", y si el usuario le pica para abajo pasa lo siguiente:
         if(x == 86 && y == 16 && (tecla == FLECHA_ABAJO )){
             BorraMarco(35, 7, x, y); //Se borra el marquito de "Jugar".
             gotoxy(x-=18,y+=10); //Te vas a la esquina superior izquierda del mensaje de "Instrucciones"
-            ImprimeMarco(71, 7, x, y); //Desde allÌ, imprimes el marco alrededor del mensaje (instrucciones)
-            gotoxy(x, y);//Y me regreso a la esquinita superior izquierda para facilitar el proceso, ya se los expliquÈ
+            ImprimeMarco(71, 7, x, y); //Desde all√≠, imprimes el marco alrededor del mensaje (instrucciones)
+            gotoxy(x, y);//Y me regreso a la esquinita superior izquierda para facilitar el proceso, ya se los expliqu√©
             tecla = getch(); //Y espero a que el usuario teclee otra cosa.
         }
 
-        if(x == 68 && y == 26 && (tecla == FLECHA_ABAJO )){ //Ahora, si el usuario est· sobre "Instrucciones" y le da pa abajo:
+        if(x == 68 && y == 26 && (tecla == FLECHA_ABAJO )){ //Ahora, si el usuario est√° sobre "Instrucciones" y le da pa abajo:
             BorraMarco(71, 7, x, y); //Se borra el marco de "Instrucciones".
             gotoxy(x+=23,y+=10); //El cursor se va a la esquina superior izquierda del mensajito de abajo o sea "Salir".
             ImprimeMarco(27, 7, x, y); //Desde la esquinita se imprime el marco alrededor de "Salir".
             gotoxy(x, y); //Me regreso a la esquinita
             tecla = getch(); //Espero a que el usuario pique otra cosa.
         }
-        //***HASTA AQUÕ SE LE DA CHANCE AL USUARIO DE QUE VAYA HACIA ABAJO, SI LLEGA A ESTE PUNTO Y LE SIGUE PICANDO A LA FLECHA PA ABAJO
+        //***HASTA AQU√ç SE LE DA CHANCE AL USUARIO DE QUE VAYA HACIA ABAJO, SI LLEGA A ESTE PUNTO Y LE SIGUE PICANDO A LA FLECHA PA ABAJO
         //PUES EL PROGRAMA NO VA A HACER NADA PORQUE NO HAY UN if QUE CONSIDERE ESE EVENTO***
 
-        //Entonces, a partir de aquÌ hago lo mismo que antes, pero ahora considerando que el usuario le da a la flechita pa arriba.
+        //Entonces, a partir de aqu√≠ hago lo mismo que antes, pero ahora considerando que el usuario le da a la flechita pa arriba.
 
-        //Si est· en el mensaje de "Salir" y pica pa abajo, ps no va a pasar nada alv xD, pero si le da pa arriba:
+        //Si est√° en el mensaje de "Salir" y pica pa abajo, ps no va a pasar nada alv xD, pero si le da pa arriba:
         if(x == 91 && y == 36 && (tecla == FLECHA_ARRIBA )){
             BorraMarco(27, 7, x, y); //Borro el marquito alrededor de "Salir"
             gotoxy(x-=23, y-=10); //Me voy a la esquina superior izquierda del mensaje de arriba o sea "Instrucciones"
@@ -350,7 +350,7 @@ int MenuPrincipal()
             tecla = getch(); //Espero a que el usuario teclee algo.
         }
 
-        if(x == 68 && y == 26 && (tecla == FLECHA_ARRIBA )){ //Ahora, si el usuario est· en el mensaje "Instrucciones" ps ya se la saben
+        if(x == 68 && y == 26 && (tecla == FLECHA_ARRIBA )){ //Ahora, si el usuario est√° en el mensaje "Instrucciones" ps ya se la saben
             BorraMarco(71, 7, x, y); //Borro el marquito alrededor de "Instrucciones"
             gotoxy(x+=18,y-=10); //Me voy al mensaje de arriba, o sea "Jugar"
             ImprimeMarco(35, 7, x, y); //Le imprimo el marco a la palabrita "Jugar"
@@ -358,12 +358,12 @@ int MenuPrincipal()
             tecla = getch(); //Espero a que el usuario teclee algo
         }
     }
-    //AquÌ, se supone que el usuario ya tecleÛ ENTER eligiendo una opciÛn, entonces, limpio la pantalla para quitar el men˙
+    //Aqu√≠, se supone que el usuario ya tecle√≥ ENTER eligiendo una opci√≥n, entonces, limpio la pantalla para quitar el men√∫
     system("cls");
 
-    //Y aquÌ wachen, usando la coordenada en y sabrÈ quÈ opciÛn eligiÛ, y ps imprimÌ un mensajito nomas para que vieran que si funcionÛ.
+    //Y aqu√≠ wachen, usando la coordenada en y sabr√© qu√© opci√≥n eligi√≥, y ps imprim√≠ un mensajito nomas para que vieran que si funcion√≥.
     //Obviamente le voy a seguir moviendo para ir completando mas esta onda, porque por ejemplo las instrucciones deben tener la opcion de
-    //devolverse al men˙ y asÌ. pero ps es un avance
+    //devolverse al men√∫ y as√≠. pero ps es un avance
 
     //Los quiero.
     if (y == 16)return JUGAR;
@@ -744,7 +744,7 @@ void Juego_Principiante(int &marcador1, int &marcador2)
     Opcion1=-1;
     Opcion2 = -1;
 
-    int i_1, i_2, j_1, j_2; //Õndices elegidos.
+    int i_1, i_2, j_1, j_2; //√çndices elegidos.
     Gameloop(i_1, i_2, j_1, j_2, Opcion1, Opcion2, x, y, TableroPrincipiante, marcador1, marcador2);
 
     /*gotoxy(1,100);
@@ -804,7 +804,7 @@ void ImprimeCartaVolteada(int ancho, int alto, int x, int y)
         cout << (char)178;
         for(int j = 1 ; j < ancho ; ++j) cout << (char)178;
     }
-//Guardar· la posiciÛn original de x y de y para que cada vez que termine una jugada, el marco
+//Guardar√° la posici√≥n original de x y de y para que cada vez que termine una jugada, el marco
     // Parte inferior del marco
     gotoxy(x,++y);
     for(int i = 0 ; i < ancho ; ++i) cout << (char)177;
@@ -992,7 +992,7 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
 {
 //                                                  *****AJUSTES PREVIOS*****
 
-    char tecla; //Caracter que guardar· lo que el usuario teclee.
+    char tecla; //Caracter que guardar√° lo que el usuario teclee.
     Carta cartas[10]; //Arreglo de Cartas (struct).
     for (int i = 0 ; i <= 9 ; ++i){ //Inicializamos los valores booleanos de todas las cartas en falso.
         cartas[i].volteada = false;
@@ -1002,31 +1002,31 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
     int x_aum = 0;  //Se le asigna su lugar a cada carta.
     int y_aum = 20;
 
-    x = 6; //PosiciÛn inicial de impresiÛn de las cartas.
+    x = 6; //Posici√≥n inicial de impresi√≥n de las cartas.
     y = 3;
 
-    for (int j = 0 ; j < 10 ; ++j){ //Se le asigna su posiciÛn a cada cartita
+    for (int j = 0 ; j < 10 ; ++j){ //Se le asigna su posici√≥n a cada cartita
         cartas[j].x = x += x_aum;
         cartas[j].y = y;
         x_aum = 43;
         if (j == 4){
-            x = 6; //Regresamos a x a su posiciÛn inicial.
+            x = 6; //Regresamos a x a su posici√≥n inicial.
             x_aum = 0; //El aumento vuelve a cero para que no se acumule.
-            y += y_aum; //Aumenta en y porque deja pasar el renglÛn.
+            y += y_aum; //Aumenta en y porque deja pasar el rengl√≥n.
         }
     }
 
     int aux = 0; //Contador auxiliar para pasar los valores del arreglo bidimensional a las cartas
-    for (int i = 0 ; i < 2 ; ++i){ //Las cartas toman el valor de su correspondiente posiciÛn del tablero.
+    for (int i = 0 ; i < 2 ; ++i){ //Las cartas toman el valor de su correspondiente posici√≥n del tablero.
         for (int j = 0 ; j < 5 ; ++j)
             cartas[aux++].valor = TableroPrincipiante[i][j];
     }
 
-    i_1 = 0; //Õndice con el que vamos a acceder al arreglo de cartas.
+    i_1 = 0; //√çndice con el que vamos a acceder al arreglo de cartas.
     i_2 = 0;
-    int x_original = 5; //La posiciÛn inicial del cursor en el tablero de principiante.
+    int x_original = 5; //La posici√≥n inicial del cursor en el tablero de principiante.
     int y_original = 2;
-    int pares = 0; //Contador con el que controlaremos cu·ndo termina el juego.
+    int pares = 0; //Contador con el que controlaremos cu√°ndo termina el juego.
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1034,7 +1034,7 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
 
     x = x_original; //Se inicializan las variables en su valor original pues estas fueron modificadas anteriormente.
     y = y_original;
-    gotoxy(x,y); //El cursor se pone en su posiciÛn inicial.
+    gotoxy(x,y); //El cursor se pone en su posici√≥n inicial.
     EstableceColor(BLANCO, ROJOCLARO); //Se imprime el marco en la primer cartita.
     ImprimeMarco(31, 18, x, y);
 
@@ -1042,10 +1042,10 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
     int marcadorEnTurno = marcador1;
     int colorEnTurno = ROJOCLARO;
 
-    while (pares < 5){ //Mientras no se destapen los 5 pares, entonces seguir· el jueguito hermoso :')
-        i_1 = 0; //Õndice con el que vamos a localizar la primer carta elegida en el arreglo de cartas.
-        i_2 = 0; //Õndice con el que vamos a localizar la segunda carta elegida en el arreglo de cartas.
-        int x_original = 5; //La posiciÛn inicial del cursor en el tablero de principiante.
+    while (pares < 5){ //Mientras no se destapen los 5 pares, entonces seguir√° el jueguito hermoso :')
+        i_1 = 0; //√çndice con el que vamos a localizar la primer carta elegida en el arreglo de cartas.
+        i_2 = 0; //√çndice con el que vamos a localizar la segunda carta elegida en el arreglo de cartas.
+        int x_original = 5; //La posici√≥n inicial del cursor en el tablero de principiante.
         int y_original = 2;
     //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1053,12 +1053,12 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
 
         x = x_original; //Se inicializan las variables en su valor original pues estas fueron modificadas anteriormente.
         y = y_original;
-        gotoxy(x,y); //El cursor se pone en su posiciÛn inicial.
+        gotoxy(x,y); //El cursor se pone en su posici√≥n inicial.
         EstableceColor(BLANCO, colorEnTurno); //Se imprime el marco en la primer cartita.
         ImprimeMarco(31, 18, x, y);
         tecla = '\0'; //Se inicializa la tecla con el caracter nulo.
 
-        //Se espera a que el usuario haga algo con el teclado, cuando se mueva, entonces se ajustar· el valor del primer Ìndice
+        //Se espera a que el usuario haga algo con el teclado, cuando se mueva, entonces se ajustar√° el valor del primer √≠ndice
         //para poder localizarlo en el arreglo.
         while(tecla !=  ENTER){
             tecla = getch();
@@ -1083,7 +1083,7 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
 
             }
             //Cuando por fin teclee ENTER, entonces hay que revisar un par de cositas:
-            //Si la carta que eligiÛ ya est· seleccionada o ya est· volteada, entonces BEEP!!, se le asigna el valor de nulo a la tecla
+            //Si la carta que eligi√≥ ya est√° seleccionada o ya est√° volteada, entonces BEEP!!, se le asigna el valor de nulo a la tecla
             //para que se repita el ciclo.
             if (tecla == ENTER){
                 if (cartas[i_1].seleccionada == true || cartas[i_1].volteada == true){
@@ -1092,15 +1092,15 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
                 }
             }
         }
-        //Una vez seleccionada una carta v·lida entonces:
+        //Una vez seleccionada una carta v√°lida entonces:
         MostrarCarta(29, 17, x, y); //Se muestra la carta.
-        cartas[i_1].seleccionada = true; //Se le asigna el valor verdadero al campo "seleccionada" a la carta en cuestiÛn.
-        EstableceColor(BLANCO,BLANCO); //Se establece el color de fondo y el color con el que se va a borrar el marco que estaba seÒalando la carta elegida.
+        cartas[i_1].seleccionada = true; //Se le asigna el valor verdadero al campo "seleccionada" a la carta en cuesti√≥n.
+        EstableceColor(BLANCO,BLANCO); //Se establece el color de fondo y el color con el que se va a borrar el marco que estaba se√±alando la carta elegida.
         BorraMarco(31,18,x,y); //Se borra el marco.
         EstableceColor(BLANCO, colorEnTurno); //Se regresa el color a la normalidad
         x = x_original; //Se ajustan las coordenadas y se les asigna el valor de la primer cartita.
         y = y_original;
-        ImprimeMarco(31,18,x,y); //Se imprime el marco en la primer carta (Siempre que seleccione algo v·lido...sieeeempre)
+        ImprimeMarco(31,18,x,y); //Se imprime el marco en la primer carta (Siempre que seleccione algo v√°lido...sieeeempre)
 
 
 
@@ -1110,7 +1110,7 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
     //                                     ***** TODO LO QUE SE NECESITA CHECAR AL SEGUNDO TURNO DEL JUGADOR*****
 
         tecla = '\0'; //De nuevo se le asigna el caracter nulo a la tecla para que se ejecute de nuevo el ciclo que sirve para que el usuario se mueva.
-        //Ahora, el Ìndice auxiliar que se modificar· ser· el i_2; el cual es el correspondiente a la segunda carta elegida.
+        //Ahora, el √≠ndice auxiliar que se modificar√° ser√° el i_2; el cual es el correspondiente a la segunda carta elegida.
         while(tecla !=  ENTER){
             tecla = getch();
             if (x >= 5 && x < 177 && tecla == FLECHA_DER){
@@ -1133,7 +1133,7 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
                 i_2-=5;
 
             }
-            //Cuando se da ENTER se checa si la carta que se est· seleccionando ya est· volteada o si ya est· seleccionada.
+            //Cuando se da ENTER se checa si la carta que se est√° seleccionando ya est√° volteada o si ya est√° seleccionada.
             if (tecla == ENTER){
                 if (cartas[i_2].seleccionada == true || cartas[i_2].volteada == true){
                     Beep(100,500);
@@ -1147,17 +1147,17 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
         EstableceColor(BLANCO,BLANCO); //Se establece el color para borrar el marco-
         BorraMarco(31,18,x,y); //Se borra el marco.
         EstableceColor(BLANCO, colorEnTurno); //Se regresan los colores a la normalidad.
-        x = x_original; //Se ajustan las coordenadas para que el cursor se vaya a la posiciÛn de la primer carta.
+        x = x_original; //Se ajustan las coordenadas para que el cursor se vaya a la posici√≥n de la primer carta.
         y = y_original;
         ImprimeMarco(31,18,x,y); //Se imprime el marco en la primer carta.
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // *****DESPU…S DE QUE SE ELIJAN 2 CARTITAS V¡LIDAS CHECAR: *****
+        // *****DESPU√âS DE QUE SE ELIJAN 2 CARTITAS V√ÅLIDAS CHECAR: *****
 
         if (cartas[i_1].valor == cartas[i_2].valor){ //CASO DE PAR!!!
             ++marcadorEnTurno; //El marcador incrementa en 1.
-            ++pares; //El n˙mero de pares tambiÈn.
+            ++pares; //El n√∫mero de pares tambi√©n.
             ImprimeMarcador(marcadorEnTurno, jugadorEnTurno); //Se imprime el nuevo marcador, de acuerdo al jugador en turno.
             Beep(900,180); //BEEP BEEP! :D
             Beep(900,700);
@@ -1190,3 +1190,58 @@ void Gameloop(int &i_1, int &i_2, int &j_1, int &j_2, int &Opcion1,
     }
 
 }
+
+//**********************************************************************************************
+Turno (x_original, y_original, indice, colorEnTuro)
+
+void Turno (int x, int y, int *indice, int colorEnTurno, /* dimen cartas*/)
+    
+       EstableceColor(BLANCO, colorEnTurno); //Se imprime el marco en la primer cartita.
+        ImprimeMarco(31, 18, x, y);
+        tecla = '\0'; //Se inicializa la tecla con el caracter nulo.
+
+        //Se espera a que el usuario haga algo con el teclado, cuando se mueva, entonces se ajustar√° el valor del primer √≠ndice
+        //para poder localizarlo en el arreglo.
+        while(tecla !=  ENTER){
+            tecla = getch();
+            if (x >= 5 && x < 177 && tecla == FLECHA_DER){
+                MoverPosicionTablero_Horizontal(x,y,PRINCIPIANTE,FLECHA_DER);
+                indice++;
+
+            }
+            if (x > 5 && x <= 177 && tecla == FLECHA_IZQ){
+                MoverPosicionTablero_Horizontal(x,y,PRINCIPIANTE,FLECHA_IZQ);
+                indice--;
+
+            }
+            if (y == 2 && tecla == FLECHA_ABAJO){
+                MoverPosicionTablero_Vertical(x,y,PRINCIPIANTE,FLECHA_ABAJO);
+                indice+=5;
+            }
+
+            if (y == 22 && tecla == FLECHA_ARRIBA){
+                MoverPosicionTablero_Vertical(x,y,PRINCIPIANTE,FLECHA_ARRIBA);
+                indice-=5;
+
+            }
+            //Cuando por fin teclee ENTER, entonces hay que revisar un par de cositas:
+            //Si la carta que eligi√≥ ya est√° seleccionada o ya est√° volteada, entonces BEEP!!, se le asigna el valor de nulo a la tecla
+            //para que se repita el ciclo.
+            if (tecla == ENTER){
+                if (cartas[indice].seleccionada == true || cartas[indice].volteada == true){
+                    Beep(100,500);
+                    tecla = '\0';
+                }
+            }
+        }
+        //Una vez seleccionada una carta v√°lida entonces:
+        MostrarCarta(29, 17, x, y); //Se muestra la carta.
+        cartas[indice].seleccionada = true; //Se le asigna el valor verdadero al campo "seleccionada" a la carta en cuesti√≥n.
+        EstableceColor(BLANCO,BLANCO); //Se establece el color de fondo y el color con el que se va a borrar el marco que estaba se√±alando la carta elegida.
+        BorraMarco(31,18,x,y); //Se borra el marco.
+        EstableceColor(BLANCO, colorEnTurno); //Se regresa el color a la normalidad
+        x = x_original; //Se ajustan las coordenadas y se les asigna el valor de la primer cartita.
+        y = y_original;
+        ImprimeMarco(31,18,x,y); //Se imprime el marco en la primer carta (Siempre que seleccione algo v√°lido...sieeeempre)
+}
+       
