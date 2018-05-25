@@ -11,80 +11,23 @@ void MenuPrincipal()
     int x = 25, y = 1;//Coordenadas en donde se va a comenzar a imprimir el título "Memorama"
 
     //Se imprime el título (MEMORAMA) en la misma posición x, solo la y cambiará porque ps, no puedo darle un endl.
-    gotoxy(x,y++);
-    cout << " .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.";
-    gotoxy(x,y++);
-    cout << "| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |";
-    gotoxy(x,y++);
-    cout << "| | ____    ____ | || |  _________   | || | ____    ____ | || |     ____     | || |  _______     | || |      __      | || | ____    ____ | || |      __      | |";
-    gotoxy(x,y++);
-    cout << "| ||_   \\  /   _|| || | |_   ___  |  | || ||_   \\  /   _|| || |   .'    `.   | || | |_   __ \\    | || |     /  \\     | || ||_   \\  /   _|| || |     /  \\     | |";
-    gotoxy(x,y++);
-    cout << "| |  |   \\/   |  | || |   | |_  \\_|  | || |  |   \\/   |  | || |  /  .--.  \\  | || |   | |__) |   | || |    / /\\ \\    | || |  |   \\/   |  | || |    / /\\ \\    | |";
-    gotoxy(x,y++);
-    cout << "| |  | |\\  /| |  | || |   |  _|  _   | || |  | |\\  /| |  | || |  | |    | |  | || |   |  __ /    | || |   / ____ \\   | || |  | |\\  /| |  | || |   / ____ \\   | |";
-    gotoxy(x,y++);
-    cout << "| | _| |_\\/_| |_ | || |  _| |___/ |  | || | _| |_\\/_| |_ | || |  \\  `--'  /  | || |  _| |  \\ \\_  | || | _/ /    \\ \\_ | || | _| |_\\/_| |_ | || | _/ /    \\ \\_ | |";
-    gotoxy(x,y++);
-    cout << "| ||_____||_____|| || | |_________|  | || ||_____||_____|| || |   `.____.'   | || | |____| |___| | || ||____|  |____|| || ||_____||_____|| || ||____|  |____|| |";
-    gotoxy(x,y++);
-    cout << "| |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |";
-    gotoxy(x,y++);
-    cout << "| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |";
-    gotoxy(x,y++);
-    cout << " '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'";
+    char myfile[30] = "Menu.txt";
+    ImprimeArchivo (myfile, x, y);
 
     //Vuelvo a inicializar las coordendadas para que el siguiente mensaje (Jugar) quede centrado.
-    x = 88;
-    y+=5;
+    x = 69;
+    y+=16;
 
-    //Repito lo mismo que con el texto anterior.
-    gotoxy(x,y++);
-    cout << "       __                      ";
-    gotoxy(x, y++);
-    cout << "      / /_  ______ _____ ______";
-    gotoxy(x,y++);
-    cout << " __  / / / / / __ `/ __ `/ ___/";
-    gotoxy(x,y++);
-    cout << "/ /_/ / /_/ / /_/ / /_/ / /    ";
-    gotoxy(x, y++);
-    cout << "\\____/\\__,_/\\__, /\\__,_/_/     ";
-    gotoxy(x, y++);
-    cout << "           /____/              ";
+    strcpy(myfile,"OpcionesMenu.txt");
+    ImprimeArchivo (myfile, x, y);
 
 
-    //Vuelvo a inicializar las coordenadas para centrar el mensaje "Instrucciones".
-    x = 70;
-    y+=5;
+    //Este pequeño bloquecillo llevo el cursor a la posición del mensaje de "Jugar". Se me hizo lógico iniciar allí
+    //e imprimo el marco alrededor
+    EstableceColor(NEGRO, ROJOCLARO);
+    x = 86;
+    y = 16;
 
-    //Se repite el proceso de impresión de mensajito.
-    gotoxy(x,y++);
-    cout << "    ____           __                       _                      ";
-    gotoxy(x,y++);
-    cout << "   /  _/___  _____/ /________  ____________(_)___  ____  ___  _____";
-    gotoxy(x,y++);
-    cout << "   / // __ \\/ ___/ __/ ___/ / / / ___/ ___/ / __ \\/ __ \\/ _ \\/ ___/";
-    gotoxy(x,y++);
-    cout << " _/ // / / (__  ) /_/ /  / /_/ / /__/ /__/ / /_/ / / / /  __(__  ) ";
-    gotoxy(x,y++);
-    cout << "/___/_/ /_/____/\\__/_/   \\__,_/\\___/\\___/_/\\____/_/ /_/\\___/____/  ";
-
-
-    //De nuevo y por última vez inicializo las coordenadas para centrar el último mensaje (Salir).
-    x = 93;
-    y+=5;
-
-    //Imprimo el mensaje.
-    gotoxy(x,y++);
-    cout << "   _____       ___     ";
-    gotoxy(x,y++);
-    cout << "  / ___/____ _/ (_)____";
-    gotoxy(x,y++);
-    cout << "  \\__ \\/ __ `/ / / ___/";
-    gotoxy(x,y++);
-    cout << " ___/ / /_/ / / / /    ";
-    gotoxy(x,y++);
-    cout << "/____/\\__,_/_/_/_/     ";
 }
 //----------------------------------------------------------------------------------------------------------------
 

@@ -44,4 +44,35 @@ void gotoxy(short x,short y);
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+/** @brief Mueve el cursor de selección en x de la carta durante el juego.
+ *
+ * @param x Es la posición en x donde se va a imprimir inicialmente el cursor.
+ *
+ * @param y Es la posición en y donde se va a imprimir inicialmente el cursor.
+ *
+ * @param dificultad Es la variable que inidca el tamaño del tablero.
+ *
+ * @param direccion Es la variable que indica en que dirección va el cursor horizontalmente.
+*/
+void MoverPosicionTablero_Horizontal(int &x, int y, int dificultad, int direccion);
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+/** @brief Mueve el cursor de selección en y de la carta durante el juego.
+ *
+ * @param x Es la posición en x donde se va a imprimir inicialmente el cursor.
+ *
+ * @param y Es la posición en y donde se va a imprimir inicialmente el cursor.
+ *
+ * @param dificultad Es la variable que inidca el tamaño del tablero.
+ *
+ * @param direccion Es la variable que indica en que dirección va el cursor verticalmente.
+*/
+void MoverPosicionTablero_Vertical(int x, int &y, int dificultad, int direccion);
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #endif // CONTROLCONSOLA_H_INCLUDED

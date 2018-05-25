@@ -196,3 +196,42 @@ void ElegirNombresJugadores(char J1[], char J2[])
     system("cls");
 }
 //-------------------------------------------------------------------------------------------------------------
+
+
+void Tablero(int dificultad, int &marcador1, int &marcador2)
+{
+    switch (dificultad){
+        case PRINCIPIANTE: Juego_Principiante(marcador1, marcador2); break;
+        case INTERMEDIO: Juego_Intermedio(marcador1, marcador2); break;
+        case EXPERTO: Juego_Experto(marcador1, marcador2); break;
+    }
+}
+//--------------------------------------------------------------------------------------------------------------
+
+void GeneraTablero(int Tablero[][10], int renTablero, int MazoCartas[])
+{
+    gotoxy(20, 10);
+    int indiceCartas = 0;
+    for (int i = 0 ; i < renTablero ; ++i){
+        for (int j = 0 ; j < 5 ; ++j) Tablero[i][j] = MazoCartas[indiceCartas++];
+    }
+}
+//---------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------
+
+void ImprimeMarcador(int &marcador, int jugador)
+{
+    int x, y = 50;
+    if (jugador == 1){
+        EstableceColor(BLANCO, ROJOCLARO);
+        x = 50;
+    }else{
+        EstableceColor(BLANCO, AZULCLARO);
+        x = 160;
+    }
+
+    gotoxy(x,y);
+    cout << marcador;
+
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------------
