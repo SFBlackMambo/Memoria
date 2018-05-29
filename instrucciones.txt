@@ -1,0 +1,49 @@
+                           _____ _   _  _____ _______ _____  _    _  _____ _____ _____ ____  _   _ ______  _____ 
+                          |_   _| \ | |/ ____|__   __|  __ \| |  | |/ ____/ ____|_   _/ __ \| \ | |  ____|/ ____|
+                	    | | |  \| | (___    | |  | |__) | |  | | |   | |      | || |  | |  \| | |__  | (___  
+                	    | | | . ` |\___ \   | |  |  _  /| |  | | |   | |      | || |  | | . ` |  __|  \___ \ 
+                           _| |_| |\  |____) |  | |  | | \ \| |__| | |___| |____ _| || |__| | |\  | |____ ____) |
+                          |_____|_| \_|_____/   |_|  |_|  \_\\____/ \_____\_____|_____\____/|_| \_|______|_____/ 
+
+
+
+
+                                  __  __  ______      _______ __  __ _____ ______ _   _ _______ ____  
+                                 |  \/  |/ __ \ \    / /_   _|  \/  |_   _|  ____| \ | |__   __/ __ \ 
+                                 | \  / | |  | \ \  / /  | | | \  / | | | | |__  |  \| |  | | | |  | |
+                                 | |\/| | |  | |\ \/ /   | | | |\/| | | | |  __| | . ` |  | | | |  | |
+                                 | |  | | |__| | \  /   _| |_| |  | |_| |_| |____| |\  |  | | | |__| |
+                                 |_|  |_|\____/   \/   |_____|_|  |_|_____|______|_| \_|  |_|  \____/ 
+
+Para moverte por el tablero use las flechas de su teclado correspondiente o con las teclas "w", "a", "s" y "d".
+
+Para seleccionar una carta presione "Enter".
+
+
+                                              _____  ______ _____ _              _____ 
+                                             |  __ \|  ____/ ____| |      /\    / ____|
+                                             | |__) | |__ | |  __| |     /  \  | (___  
+                                             |  _  /|  __|| | |_ | |    / /\ \  \___ \ 
+                                             | | \ \| |___| |__| | |__ / ____ \ ____) |
+                                             |_|  \_|______\_____|____/_/    \_|_____/ 
+
+ 
+El juego comienza revolviendo las cartas y repartiéndolas al azar boca abajo de tal modo que no sea posible ver la imagen que se encuentra en ellas.
+
+Un jugador escoge dos cartas, si las dos que escogió son iguales, obtiene un putno y tiene derecho a escoger otras dos; si las dos cartas que escogió son diferentes 
+se colocaran otra vez boca abajo en el mismo lugar y procura recordar que cuartas eran, cediendo el turno a otro jugador.
+
+El siguiente jugador selecciona otras dos cartas, si las dos que escogió son iguales, obtiene un putno y tiene derecho a escoger otras dos; si las dos cartas que escogió son diferentes 
+se colocaran otra vez boca abajo en el mismo lugar y procura recordar que cuartas eran, cediendo el turno a otro jugador.
+
+Gana el jugador que consiga más pares de cartas.
+
+
+
+
+
+                                            ____  ________________  ___________ ___    ____ 
+                                           / __ \/ ____/ ____/ __ \/ ____/ ___//   |  / __ \
+                                          / /_/ / __/ / / __/ /_/ / __/  \__ \/ /| | / /_/ /
+                                         / _, _/ /___/ /_/ / _, _/ /___ ___/ / ___ |/ _, _/ 
+                                        /_/ |_/_____/\____/_/ |_/_____//____/_/  |_/_/ |_|
